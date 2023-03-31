@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import img2 from "../images/img3.jpg";
+//import img2 from "../images/img3.jpg";
 import "../index.css";
 import axios from "axios"
 
@@ -43,7 +43,7 @@ const Card = ({ title, description, imageURL, userName, isUser, id }) => {
             {description}
           </p>
           
-        </div>
+      </div>
       </div>
     </div>
   );

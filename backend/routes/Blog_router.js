@@ -24,7 +24,6 @@ router.post("/add", async (req, res, next) => {
   try {
     existingUser = await User.findById(user);
   } catch (err) {
-    console.log(err);
   }
   if (!existingUser) {
     return res.status(400).json({

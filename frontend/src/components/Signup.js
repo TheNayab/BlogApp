@@ -26,7 +26,7 @@ const Auth = () => {
         email: Inputs.email,
         password: Inputs.password,
       })
-      .catch((err) => console.log(err));
+      .catch((err) => alert("Email Already Exist"));
 
     const data = await res.data;
     return data;

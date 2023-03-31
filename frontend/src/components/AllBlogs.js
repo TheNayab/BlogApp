@@ -19,6 +19,7 @@ const AllBlogs = () => {
     <div>
       <Blog />
       {/* <Card/> */}
+      <div className="Alll">
       {blogs &&
         blogs.map((blog, index) => (
           <Card
@@ -30,6 +31,7 @@ const AllBlogs = () => {
             userName={blog.user.name}
           />
         ))}
+        </div>
     </div>
   );
 };

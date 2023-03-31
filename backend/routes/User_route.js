@@ -98,7 +98,7 @@ router.post("/login", (req, res, next) => {
               email: user.email,
               password: user.password,
             },
-            "Thisisallaboutmindgameboy"
+            "Thisisallaboutmindgameboy",
           );
           if(result){
             return res.status(200).json({
@@ -116,7 +116,6 @@ router.delete("/:userid", (req, res, next) => {
   User.findByIdAndRemove({
     _id: req.params.userid,
   })
-    .exec()
     .then(() => {
       res.status(200).json({
         message: "User Deleted",

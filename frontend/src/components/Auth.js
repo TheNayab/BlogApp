@@ -25,19 +25,19 @@ const Auth = () => {
         email: Inputs.email,
         password: Inputs.password,
       })
-      .catch((err) => console.log(err));
+      .catch((err) =>alert("Auth Failed"));
 
     const data = await res.data;
     return data;
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-   
-      SendRequest()
-        .then((data) => localStorage.setItem("userId", data.result._id))
-        .then(() => dispatch(authActions.login()))
-        .then(() => navigate("/blogs"));
-    
+
+    SendRequest()
+      .then((data) => localStorage.setItem("userId", data.result._id))
+      .then(() => dispatch(authActions.login()))
+      .then(() => navigate("/blogs"))
+      
   };
   return (
     <div>
@@ -62,7 +62,6 @@ const Auth = () => {
         <button type="submit" className="fbtn1">
           Submit
         </button>
-       
       </form>
     </div>
   );
